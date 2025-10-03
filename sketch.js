@@ -99,7 +99,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton = createButton(asciiArt1);
   uploadButton.mousePressed(uploadSnapshotToGoogle);
   uploadButton.hide();
-  let uploadBtnWidth = 930; // ancho aproximado
+  let uploadBtnWidth = 1010; // ancho aproximado
   uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 140);
   uploadButton.style('white-space', 'pre');  
   uploadButton.style('font-family', 'VT323, monospace');
@@ -107,7 +107,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton.style('background', '#06036f');
   uploadButton.style('color', '#ff00d6');
   uploadButton.style('padding', '20px');
-  uploadButton.style('font-size', '12px'); 
+  uploadButton.style('font-size', '11px'); 
   uploadButton.style('border', 'none');        
   uploadButton.style('outline', 'none');        
   uploadButton.style('box-shadow', 'none');   
@@ -115,21 +115,21 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   downloadButton = createButton(asciiArt2);
   downloadButton.mousePressed(downloadSnapshot);
   downloadButton.hide();
-  let downloadBtnWidth = 930; // ancho aproximado
-  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 440);
+  let downloadBtnWidth = 1010; // ancho aproximado
+  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 430);
   downloadButton.style('white-space', 'pre');  
   downloadButton.style('font-family', 'VT323, monospace');
   downloadButton.style('line-height', '1.1');
   downloadButton.style('background', '#06036f');
   downloadButton.style('color', '#ff00d6');
   downloadButton.style('padding', '20px');
-  downloadButton.style('font-size', '12px'); 
+  downloadButton.style('font-size', '11px'); 
   downloadButton.style('border', 'none');        
   downloadButton.style('outline', 'none');        
   downloadButton.style('box-shadow', 'none');  
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(460, height + 720); 
+  retakeButton.position(500, height + 710); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
@@ -143,7 +143,7 @@ function styleButton(btn, color) {
   btn.style('background', '#06036f');
   btn.style('color',  '#ff00d6');
   btn.style('border', 'none');
-  btn.style('font-size', '40px');
+  btn.style('font-size', '50px');
   btn.style('font-family', 'VT323, monospace');
 
 }
@@ -220,7 +220,7 @@ function draw() {
   const lineSpacing = 24;
   
   textFont('VT323');
-  textSize(62);
+  textSize(52);
   fill(255, 255, 0);
   stroke(30);
   strokeWeight(1);
