@@ -60,21 +60,21 @@ styleButton(snapButton);
 
 // Botón "Subir foto"
 uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑');
-uploadButton.position(windowWidth * 0.05, height + windowHeight * 0.20);
+uploadButton.position(windowWidth * 0.05, height + windowHeight * 0.22);
 uploadButton.mousePressed(uploadSnapshotToGoogle);
 uploadButton.hide();
 styleButton(uploadButton);
 
 // Botón "Descargar foto"
 downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓');
-downloadButton.position(windowWidth * 0.18, height + windowHeight * 0.34);
+downloadButton.position(windowWidth * 0.18, height + windowHeight * 0.36);
 downloadButton.mousePressed(downloadSnapshot);
 downloadButton.hide();
 styleButton(downloadButton);
 
 // Botón "Continuar clasificando"
 retakeButton = createButton('Continuar clasificando');
-retakeButton.position(windowWidth * 0.05, height + windowHeight * 0.48);
+retakeButton.position(windowWidth * 0.05, height + windowHeight * 0.52);
 retakeButton.mousePressed(retakeSnapshot);
 retakeButton.hide();
 styleButton(retakeButton);
