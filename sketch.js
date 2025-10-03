@@ -99,7 +99,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton = createButton(asciiArt1);
   uploadButton.mousePressed(uploadSnapshotToGoogle);
   uploadButton.hide();
-  let uploadBtnWidth = 372; // ancho aproximado
+  let uploadBtnWidth = 780; // ancho aproximado
   uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 120);
   uploadButton.style('white-space', 'pre');  
   uploadButton.style('font-family', 'VT323, monospace');
@@ -107,7 +107,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton.style('background', '#06036f');
   uploadButton.style('color', '#ff00d6');
   uploadButton.style('padding', '10px');
-  uploadButton.style('font-size', '6px'); 
+  uploadButton.style('font-size', '8px'); 
   uploadButton.style('border', 'none');        
   uploadButton.style('outline', 'none');        
   uploadButton.style('box-shadow', 'none');   
@@ -115,21 +115,21 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   downloadButton = createButton(asciiArt2);
   downloadButton.mousePressed(downloadSnapshot);
   downloadButton.hide();
-  let downloadBtnWidth = 372; // ancho aproximado
-  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 280);
+  let downloadBtnWidth = 780; // ancho aproximado
+  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 310);
   downloadButton.style('white-space', 'pre');  
   downloadButton.style('font-family', 'VT323, monospace');
   downloadButton.style('line-height', '1.1');
   downloadButton.style('background', '#06036f');
   downloadButton.style('color', '#ff00d6');
   downloadButton.style('padding', '10px');
-  downloadButton.style('font-size', '6px'); 
+  downloadButton.style('font-size', '8px'); 
   downloadButton.style('border', 'none');        
   downloadButton.style('outline', 'none');        
   downloadButton.style('box-shadow', 'none');  
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(460, height + 430); 
+  retakeButton.position(460, height + 490); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
