@@ -57,82 +57,20 @@ function setup() {
   snapButton.mousePressed(takeSnapshot);
   styleButton(snapButton);
 
-  let asciiArt1 = `
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMWOcxNMMMMMMMMMMMMMM0ldNMMMMMMMMMMMMMMXooXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWOlxNMMMMMMMMMMMMMMKldXMMMMMMMMMMMMMMNdlKMMMMMMMMM
-MMMMMMMXo. .cKMMMMMMMMMMMNd.  :0MMMMMMMMMMMWO,  'kWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd.  :KMMMMMMMMMMMNx.  ;0WMMMMMMMMMMW0;  .xNMMMMMMM
-MMMMMW0;     'kWMMMMMMMMK:     .xNMMMMMMMMXo.    .lXMMMMMMMMWNNNNXNWMWNNWMMWNNWWNXXXXXNWMMMWNXXXNMMMNXXNNXNWMMMMMMMMMMMMMMWXXXXXWMMMMWNXXNMMMWNXXXNNNNMMMWNXNNWMMMMMMMMMK:     .xNMMMMMMMMKc.    .dNMMMMMMMMNd.    .cKMMMMMM
-MMMMMKc,.   .':0WMMMMMMXl,.   .':OWMMMMMMNx;'.  .';dNMMMMMMWx;,;;,:0W0;:0MM0:;00:',;;,;kWMMk;'.,oNMNl.,;;,'dWMMMMMMMMMMMMWd.';;;xWMMNd,;,lKWMO;;,.',;oXMWx;,,c0WMMMMMMMXl,.   .':OWMMMMMMXd,'   .';kWMMMMMMWx;'.   ',oXMMMMM
-MMMMMWWWk. .xWWWMMMMMMMWWW0'  oWWWMMMMMMMMWWN:  :XWWWMMMMMMO''x00o'cKk..OMMO..OO..o00x''OMMNx' lXWMX; c00l..xMMMMMMMMMMMMWc ;O00XWMNl.c0d';0MN00l 'x0KWWd.:Ox,'kWMMMMMMWWW0'  dWWWMMMMMMMWWWK;  lNWWMMMMMMMMWWNl  ;KWWWMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMk.,ONNKO0WO..OMMO..kO..xNNO'.kMMMK,.xMMMX; oNNd.,OMMMMMMMMMMMMWc :XNNWMMx.,KMNl.cNMMMd.,KMMMO..OWWd.;KMMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWo  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMNo'',;,c0WO..OMMO..kO. .,,'.lXMMMK,.xMMMX; .,,.cKWMMMMMMMMMMMMWc .,,,dWMo :NMMd ;XMMMx.,KMMMx.,KMMk.'0MMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMWXOOO0l.:Kk..OMMO..kO..oOOd''OMMMK,.xMMMX; c0l.,KMMMMMMMMMMMMMWc ;O00XWMd ;XMWo :XMMMx.,KMMMk.'0WWx.,0MMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMO:lKNNx.,0O..kNNk..OO'.xNNO'.kMMW0,.dWMMX; dMNc.lNMMMMMMMMMMMMWc cWMMMMMK;.dNO,'kWMMMx.,KMMMNc.lX0:.dWMMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMNo.',,.'xNNd'',,''dN0'.',,'.oNMMk,. .oNMX:.dMMK;.xMMMMMMMMMMMMWl lWMMMMMWKc.,';ONMMMMx.;KMMMMXl',',xNMMMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMMN0OOOOKWMMN0OOOO0NMNKOOOOO0NMMMX0OOOKWMWK0XMMWKOXMMMMMMMMMMMMMXOXMMMMMMMMXOOOKWMMMMMN0KWMMMMMN0OOKWMMMMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMO. .xMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMWc  :NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK,  dMMMMMMMMMMMMMX;  lWMMMMMMMMMMMMWl  ;XMMMMMMMM
-MMMMMMMMKl,:0MMMMMMMMMMMMMXo,;OMMMMMMMMMMMMMWx,,dWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl,:OMMMMMMMMMMMMMNd,;kMMMMMMMMMMMMMMk;,oNMMMMMMMM
-MMMMMMMMMWWWMMMMMMMMMMMMMMMWWWMMMMMMMMMMMMMMMWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWMMMMMMMMMMMMMMMWWWMMMMMMMMMMMMMMMWWWWMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-`;
-  
-   let asciiArt2 = `                                                                                                                        
-                                                                                                                        
-         cOO:              ;OOc              ,kOl.                                                                                                                        .dOd.             .lOk,              cOO;         
-         dMWl              cWMx.             :NMk.                                                                                                                        '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.               ......     ......     .....      ....      ....     ......      ....      ...     .......                '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.              .x0Oxkk;   .d0Oxkd'  .dOxkkO:   .oOxkOc    ,OKKx.   cKOkxk0l.   cOkkOo.   .dKO;   ;O0kkk0d.               '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.              'OK:.,kO;  .kXc...  .dKl..'dk' .d0c..oO,  .dNXXXl   oMd..:KX:  lKo..lO:   cXXNx.  :NO,.,kNo.              '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.              'OK,  ,O0' .kXc...  .dKl...'. .oXl   ..   cXd;:kK;  oMd..;OO' cNx. .',.  ,0O;dNl  :NO'.'xK:               '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.              '0K,  .OK, .OW0xkd'  .dOkxkOc .xNc       .kXl..oNd. oMXkkKx.  lWd .lOKl  oWd.cXO. :NXOk0k,                '0MK,             .kMNc             .xMWl         
-         dMWl              cWMx.             :NMk.              'OK,  ,O0' .kXc...   .'...,kK;.oXl    .  'OXOkkONk. oWd.;O0,  :Nx. .oWd .xN0kOX0, :NO,'xXc                '0MK,             .kMNc             .xMWl         
-      ..'kMMd...        ...oWMk'..        ...lNMO,..            'OK:.,xO;  .kXc...  .lk:..'kK; .d0c..oO, oNo....xNc oWo  :Kx.  lKo..oXl :Xk'..oNo.:Nx. ,OO,             ..:KMXc..         ..'OMWo...        ..'kMWd...      
-      :OXNMMNKO;        ,kKNMMWXOc.       ,xKNMMWX0l.           .x0Oxkk;   .dKOkkd'  .dOxxkO:   .oOkkOc  lK:    lK: cKc   l0:   lOkkOo. :0l   ;0o.;0o.  ;Ol.           .o0XWMWXKd.       .c0XWMMNKk,       .cOXNMMNKk;      
-       ;0WMMWO,          'kWMMMK:          .xNMMMKc.             ......     ......    ......      ....    .      .   .     .     ....    .     ..  ..    ..             .oXMMMNd.          :KMMMWk'          ;0MMMWk'       
-        .dNXo.            .lXNx.            .cKWk'                                                                                                                        ,OW0;             'kWXc.            .xNXo.        
-          ,,                ';.               ';.                                                                                                                          .:.               .;'                ;'          
-                                                                                                                        
-                                                                                                                        `;
+  uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑'); 
+  uploadButton.position(40, height + 140); 
+  uploadButton.mousePressed(uploadButton); 
+  uploadButton.hide(); 
+  styleButton(uploadButton);
 
-  
-  // Botón de subir (ASCII)
-uploadButton = createButton(asciiArt1);
-uploadButton.mousePressed(uploadSnapshotToGoogle);
-uploadButton.hide();
-let uploadBtnWidth = Math.min(830, windowWidth * 0.95); // ancho máximo 830px, adaptativo
-uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 140);
-uploadButton.style('white-space', 'pre');  
-uploadButton.style('font-family', 'VT323, monospace');
-uploadButton.style('line-height', '1.1');
-uploadButton.style('background', '#06036f');
-uploadButton.style('color', '#ff00d6');
-uploadButton.style('padding', '20px');
-uploadButton.style('font-size', '9px'); 
-uploadButton.style('border', 'none');        
-uploadButton.style('outline', 'none');        
-uploadButton.style('box-shadow', 'none');   
-
-// Botón de descargar (ASCII)
-downloadButton = createButton(asciiArt2);
-downloadButton.mousePressed(downloadSnapshot);
-downloadButton.hide();
-let downloadBtnWidth = Math.min(830, windowWidth * 0.95);
-downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 380);
-downloadButton.style('white-space', 'pre');  
-downloadButton.style('font-family', 'VT323, monospace');
-downloadButton.style('line-height', '1.1');
-downloadButton.style('background', '#06036f');
-downloadButton.style('color', '#ff00d6');
-downloadButton.style('padding', '20px');
-downloadButton.style('font-size', '9px'); 
-downloadButton.style('border', 'none');        
-downloadButton.style('outline', 'none');        
-downloadButton.style('box-shadow', 'none');  
-
+  downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓'); 
+  downloadButton.position(90, height + 240); 
+  downloadButton.mousePressed(downloadButton); 
+  downloadButton.hide(); 
+  styleButton(downloadButton);
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(50, height + 610); 
+  retakeButton.position(60, height + 340); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
