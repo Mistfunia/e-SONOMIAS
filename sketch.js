@@ -59,13 +59,13 @@ function setup() {
 
   uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑'); 
   uploadButton.position(40, height + 140); 
-  uploadButton.mousePressed(uploadButton); 
+  uploadButton.mousePressed(uploadSnapshotToGoogle); 
   uploadButton.hide(); 
   styleButton(uploadButton);
 
   downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓'); 
   downloadButton.position(90, height + 240); 
-  downloadButton.mousePressed(downloadButton); 
+  downloadButton.mousePressed(downloadSnapshot); 
   downloadButton.hide(); 
   styleButton(downloadButton);
 
