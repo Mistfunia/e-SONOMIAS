@@ -99,15 +99,15 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton = createButton(asciiArt1);
   uploadButton.mousePressed(uploadSnapshotToGoogle);
   uploadButton.hide();
-  let uploadBtnWidth = 800; // ancho aproximado
+  let uploadBtnWidth = 930; // ancho aproximado
   uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 150);
   uploadButton.style('white-space', 'pre');  
   uploadButton.style('font-family', 'VT323, monospace');
   uploadButton.style('line-height', '1.1');
   uploadButton.style('background', '#06036f');
   uploadButton.style('color', '#ff00d6');
-  uploadButton.style('padding', '10px');
-  uploadButton.style('font-size', '9px'); 
+  uploadButton.style('padding', '20px');
+  uploadButton.style('font-size', '10px'); 
   uploadButton.style('border', 'none');        
   uploadButton.style('outline', 'none');        
   uploadButton.style('box-shadow', 'none');   
@@ -115,21 +115,21 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   downloadButton = createButton(asciiArt2);
   downloadButton.mousePressed(downloadSnapshot);
   downloadButton.hide();
-  let downloadBtnWidth = 800; // ancho aproximado
-  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 360);
+  let downloadBtnWidth = 930; // ancho aproximado
+  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 410);
   downloadButton.style('white-space', 'pre');  
   downloadButton.style('font-family', 'VT323, monospace');
   downloadButton.style('line-height', '1.1');
   downloadButton.style('background', '#06036f');
   downloadButton.style('color', '#ff00d6');
-  downloadButton.style('padding', '10px');
-  downloadButton.style('font-size', '9px'); 
+  downloadButton.style('padding', '20px');
+  downloadButton.style('font-size', '10px'); 
   downloadButton.style('border', 'none');        
   downloadButton.style('outline', 'none');        
   downloadButton.style('box-shadow', 'none');  
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(480, height + 560); 
+  retakeButton.position(480, height + 655); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
@@ -143,7 +143,7 @@ function styleButton(btn, color) {
   btn.style('background', '#06036f');
   btn.style('color',  '#ff00d6');
   btn.style('border', 'none');
-  btn.style('font-size', '70px');
+  btn.style('font-size', '55px');
   btn.style('font-family', 'VT323, monospace');
 
 }
@@ -220,7 +220,7 @@ function draw() {
   const lineSpacing = 24;
   
   textFont('VT323');
-  textSize(24);
+  textSize(32);
   fill(255, 255, 0);
   stroke(30);
   strokeWeight(1);
