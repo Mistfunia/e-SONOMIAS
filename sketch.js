@@ -96,40 +96,43 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
                                                                                                                         `;
 
   
-  uploadButton = createButton(asciiArt1);
-  uploadButton.mousePressed(uploadSnapshotToGoogle);
-  uploadButton.hide();
-  let uploadBtnWidth = 830; // ancho aproximado
-  uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 140);
-  uploadButton.style('white-space', 'pre');  
-  uploadButton.style('font-family', 'VT323, monospace');
-  uploadButton.style('line-height', '1.1');
-  uploadButton.style('background', '#06036f');
-  uploadButton.style('color', '#ff00d6');
-  uploadButton.style('padding', '20px');
-  uploadButton.style('font-size', '9px'); 
-  uploadButton.style('border', 'none');        
-  uploadButton.style('outline', 'none');        
-  uploadButton.style('box-shadow', 'none');   
-  
-  downloadButton = createButton(asciiArt2);
-  downloadButton.mousePressed(downloadSnapshot);
-  downloadButton.hide();
-  let downloadBtnWidth = 830; // ancho aproximado
-  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 380);
-  downloadButton.style('white-space', 'pre');  
-  downloadButton.style('font-family', 'VT323, monospace');
-  downloadButton.style('line-height', '1.1');
-  downloadButton.style('background', '#06036f');
-  downloadButton.style('color', '#ff00d6');
-  downloadButton.style('padding', '20px');
-  downloadButton.style('font-size', '9px'); 
-  downloadButton.style('border', 'none');        
-  downloadButton.style('outline', 'none');        
-  downloadButton.style('box-shadow', 'none');  
+  // Botón de subir (ASCII)
+uploadButton = createButton(asciiArt1);
+uploadButton.mousePressed(uploadSnapshotToGoogle);
+uploadButton.hide();
+let uploadBtnWidth = Math.min(830, windowWidth * 0.95); // ancho máximo 830px, adaptativo
+uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 140);
+uploadButton.style('white-space', 'pre');  
+uploadButton.style('font-family', 'VT323, monospace');
+uploadButton.style('line-height', '1.1');
+uploadButton.style('background', '#06036f');
+uploadButton.style('color', '#ff00d6');
+uploadButton.style('padding', '20px');
+uploadButton.style('font-size', '9px'); 
+uploadButton.style('border', 'none');        
+uploadButton.style('outline', 'none');        
+uploadButton.style('box-shadow', 'none');   
+
+// Botón de descargar (ASCII)
+downloadButton = createButton(asciiArt2);
+downloadButton.mousePressed(downloadSnapshot);
+downloadButton.hide();
+let downloadBtnWidth = Math.min(830, windowWidth * 0.95);
+downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 380);
+downloadButton.style('white-space', 'pre');  
+downloadButton.style('font-family', 'VT323, monospace');
+downloadButton.style('line-height', '1.1');
+downloadButton.style('background', '#06036f');
+downloadButton.style('color', '#ff00d6');
+downloadButton.style('padding', '20px');
+downloadButton.style('font-size', '9px'); 
+downloadButton.style('border', 'none');        
+downloadButton.style('outline', 'none');        
+downloadButton.style('box-shadow', 'none');  
+
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(520, height + 610); 
+  retakeButton.position(50, height + 610); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
