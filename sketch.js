@@ -29,7 +29,7 @@ function setup() {
   infoDiv.style('padding', '6px');
   infoDiv.style('max-width', '600px');
   infoDiv.style('font-family', 'VT323, monospace'); // para DOM
-  infoDiv.style('font-size', '20px');
+  infoDiv.style('font-size', '32px');
 
   // Cámara trasera (móvil)
   let constraints = {
@@ -143,7 +143,7 @@ function styleButton(btn, color) {
   btn.style('background', '#06036f');
   btn.style('color',  '#ff00d6');
   btn.style('border', 'none');
-  btn.style('font-size', '28px');
+  btn.style('font-size', '40px');
   btn.style('font-family', 'VT323, monospace');
 
 }
