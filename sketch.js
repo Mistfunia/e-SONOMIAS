@@ -54,27 +54,27 @@ function setup() {
   // Botones
   // Botón "Tomar foto"
 snapButton = createButton('Tomar foto');
-snapButton.position(windowWidth * 0.01, height + windowHeight * 0.08);
+snapButton.position(windowWidth * 0.01, height + windowHeight * 0.04);
 snapButton.mousePressed(takeSnapshot);
 styleButton(snapButton);
 
 // Botón "Subir foto"
 uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑');
-uploadButton.position(windowWidth * 0.05, height + windowHeight * 0.22);
+uploadButton.position(windowWidth * 0.05, height + windowHeight * 0.16);
 uploadButton.mousePressed(uploadSnapshotToGoogle);
 uploadButton.hide();
 styleButton(uploadButton);
 
 // Botón "Descargar foto"
 downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓');
-downloadButton.position(windowWidth * 0.18, height + windowHeight * 0.36);
+downloadButton.position(windowWidth * 0.18, height + windowHeight * 0.26);
 downloadButton.mousePressed(downloadSnapshot);
 downloadButton.hide();
 styleButton(downloadButton);
 
 // Botón "Continuar clasificando"
 retakeButton = createButton('Continuar clasificando');
-retakeButton.position(windowWidth * 0.05, height + windowHeight * 0.52);
+retakeButton.position(windowWidth * 0.05, height + windowHeight * 0.36);
 retakeButton.mousePressed(retakeSnapshot);
 retakeButton.hide();
 styleButton(retakeButton);
