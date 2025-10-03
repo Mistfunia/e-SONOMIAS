@@ -52,28 +52,33 @@ function setup() {
   });
 
   // Botones
-  snapButton = createButton('Tomar foto');
-  snapButton.position(10, height + 50);
-  snapButton.mousePressed(takeSnapshot);
-  styleButton(snapButton);
+  // Botón "Tomar foto"
+snapButton = createButton('Tomar foto');
+snapButton.position(windowWidth * 0.01, height + windowHeight * 0.08);
+snapButton.mousePressed(takeSnapshot);
+styleButton(snapButton);
 
-  uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑'); 
-  uploadButton.position(40, height + 140); 
-  uploadButton.mousePressed(uploadSnapshotToGoogle); 
-  uploadButton.hide(); 
-  styleButton(uploadButton);
+// Botón "Subir foto"
+uploadButton = createButton('↑↑↑↑↑SUBIR FOTO↑↑↑↑↑');
+uploadButton.position(windowWidth * 0.05, height + windowHeight * 0.20);
+uploadButton.mousePressed(uploadSnapshotToGoogle);
+uploadButton.hide();
+styleButton(uploadButton);
 
-  downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓'); 
-  downloadButton.position(90, height + 240); 
-  downloadButton.mousePressed(downloadSnapshot); 
-  downloadButton.hide(); 
-  styleButton(downloadButton);
+// Botón "Descargar foto"
+downloadButton = createButton('↓↓↓↓↓DESCARGAR↓↓↓↓↓');
+downloadButton.position(windowWidth * 0.18, height + windowHeight * 0.34);
+downloadButton.mousePressed(downloadSnapshot);
+downloadButton.hide();
+styleButton(downloadButton);
 
-  retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(60, height + 340); 
-  retakeButton.mousePressed(retakeSnapshot); 
-  retakeButton.hide(); 
-  styleButton(retakeButton);
+// Botón "Continuar clasificando"
+retakeButton = createButton('Continuar clasificando');
+retakeButton.position(windowWidth * 0.05, height + windowHeight * 0.48);
+retakeButton.mousePressed(retakeSnapshot);
+retakeButton.hide();
+styleButton(retakeButton);
+
 }
 
 
