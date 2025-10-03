@@ -100,14 +100,14 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   uploadButton.mousePressed(uploadSnapshotToGoogle);
   uploadButton.hide();
   let uploadBtnWidth = 930; // ancho aproximado
-  uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 150);
+  uploadButton.position((windowWidth - uploadBtnWidth)/2, height + 140);
   uploadButton.style('white-space', 'pre');  
   uploadButton.style('font-family', 'VT323, monospace');
   uploadButton.style('line-height', '1.1');
   uploadButton.style('background', '#06036f');
   uploadButton.style('color', '#ff00d6');
   uploadButton.style('padding', '20px');
-  uploadButton.style('font-size', '10px'); 
+  uploadButton.style('font-size', '12px'); 
   uploadButton.style('border', 'none');        
   uploadButton.style('outline', 'none');        
   uploadButton.style('box-shadow', 'none');   
@@ -116,20 +116,20 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   downloadButton.mousePressed(downloadSnapshot);
   downloadButton.hide();
   let downloadBtnWidth = 930; // ancho aproximado
-  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 410);
+  downloadButton.position((windowWidth - downloadBtnWidth)/2, height + 440);
   downloadButton.style('white-space', 'pre');  
   downloadButton.style('font-family', 'VT323, monospace');
   downloadButton.style('line-height', '1.1');
   downloadButton.style('background', '#06036f');
   downloadButton.style('color', '#ff00d6');
   downloadButton.style('padding', '20px');
-  downloadButton.style('font-size', '10px'); 
+  downloadButton.style('font-size', '12px'); 
   downloadButton.style('border', 'none');        
   downloadButton.style('outline', 'none');        
   downloadButton.style('box-shadow', 'none');  
 
   retakeButton = createButton('Continuar clasificando'); 
-  retakeButton.position(480, height + 655); 
+  retakeButton.position(460, height + 720); 
   retakeButton.mousePressed(retakeSnapshot); 
   retakeButton.hide(); 
   styleButton(retakeButton);
@@ -143,7 +143,7 @@ function styleButton(btn, color) {
   btn.style('background', '#06036f');
   btn.style('color',  '#ff00d6');
   btn.style('border', 'none');
-  btn.style('font-size', '55px');
+  btn.style('font-size', '40px');
   btn.style('font-family', 'VT323, monospace');
 
 }
@@ -220,7 +220,7 @@ function draw() {
   const lineSpacing = 24;
   
   textFont('VT323');
-  textSize(32);
+  textSize(62);
   fill(255, 255, 0);
   stroke(30);
   strokeWeight(1);
