@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;   
+  overflow-x: hidden;       
+  overflow-y: auto;         
+}
+
+canvas {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
